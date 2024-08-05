@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7BBDBD"
+    tools:context=".JournalEntry">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="358dp"
+        android:background="#3E8A8A"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/uploadButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:title="Journal Entry"
+        app:titleCentered="true"
+        app:titleTextColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/JournalText"
+        android:layout_width="378dp"
+        android:layout_height="310dp"
+        android:background="@drawable/rounded_background_edittext"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Write down your thoughts..."
+        android:inputType="textMultiLine"
+        android:padding="5dp"
+        android:shadowColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.232" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="409dp"
+        android:layout_height="71dp"
+        android:background="#3E8A8A"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveButton"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/nav_bar" />
+
+    <Button
+        android:id="@+id/uploadButton"
+        android:layout_width="178dp"
+        android:layout_height="61dp"
+        android:backgroundTint="#E3EFEF"
+        android:onClick="onUploadClick"
+        android:text="Upload Image"
+        android:textColor="#272727"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JournalText"
+        app:layout_constraintVertical_bias="0.648" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="178dp"
+        android:layout_height="61dp"
+        android:backgroundTint="#E3EFEF"
+        android:onClick="onSaveClick"
+        android:text="Save"
+        android:textColor="#272727"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JournalText"
+        app:layout_constraintVertical_bias="0.648" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JournalText"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

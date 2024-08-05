@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Mentality</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="glasses_drunk">glasses drunk: </string>
+    <string name="hours_slept">hours slept</string>
+    <string name="minutes_slept">minutes slept</string>
+    <string name="last_sleep">last nights sleep</string>
+    <string name="rate_mood_title">rate your mood</string>
+    <string name="weather_today">whats the weather today</string>
+    <string name="mood_rating">your mood rating: </string>
+    <string name="time_slept">Time slept: %s hours %s minutes</string>
+    <string name="mood_rating_text">Mood Rating: %s</string>
+    <string name="glasses_drunk_text">Glasses of water drunk: %s</string>
+    <string name="weather_day_text">Weather: %s</string>
+    <string name="Journal_entry">Journal entry:\n %s</string>
+    <string name="mood_trends">Mood Trends</string>
+    <string name="add_to_journal">Add To Journal</string>
+    <string name="rate_mood">Rate Mood</string>
+    <string name="graphical_view">Graphical View</string>
+    <string name="login">Login</string>
+    <string name="submit">submit</string>
+    <string name="please_enter_your_pin">Please enter your pin</string>
+    <string-array name="weather_options">
+        <item>cold</item>
+        <item>snow</item>
+        <item>rain</item>
+        <item>cloud</item>
+        <item>sunny</item>
+        <item>hot</item>
+    </string-array>
+    <string-array name="graph_options">
+        <item>Mood Rating</item>
+        <item>Glasses drunk</item>
+        <item>Hours Slept</item>
+    </string-array>
+</resources>

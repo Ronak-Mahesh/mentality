@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Home"
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item android:title="Journal"
+        android:id="@+id/journal"
+        android:icon="@drawable/baseline_menu_book_24"/>
+
+    <item android:title="Trends"
+        android:id="@+id/trends"
+        android:icon="@drawable/baseline_show_chart_24"/>
+
+    <item android:title="Mood"
+        android:id="@+id/mood"
+        android:icon="@drawable/baseline_tag_faces_24"/>
+
+    <item android:title="Resources"
+        android:id="@+id/resources"
+        android:icon="@drawable/baseline_resources_24"/>
+</menu>

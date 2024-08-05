@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7BBDBD"
+    tools:context=".DailyMood">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="#3E8A8A"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/moodRating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:title="Rate Mood"
+        app:titleCentered="true" />
+
+    <TextView
+        android:id="@+id/moodRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="148dp"
+        android:text="@string/mood_rating"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.986"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.182"
+        tools:text="Your mood rating:" />
+
+    <SeekBar
+        android:id="@+id/seekBarMood"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:max="10"
+        android:progress="1"
+        android:progressTint="#E3EFEF"
+        app:layout_constraintBottom_toTopOf="@+id/lastNightsText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodRating"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/glassesDrunkText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="120dp"
+        android:text="@string/glasses_drunk"
+        app:layout_constraintEnd_toStartOf="@+id/lastNightsText"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarMood"
+        tools:text="Glasses drunk:" />
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="57dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#E3EFEF"
+        android:onClick="onGlassesPlusClick"
+        android:text="@string/plus"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/minusButton"
+        app:layout_constraintTop_toBottomOf="@+id/glassesDrunkText" />
+
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="57dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="69dp"
+        android:backgroundTint="#E3EFEF"
+        android:onClick="onGlassesMinusClick"
+        android:text="@string/minus"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/minutesSleptNumber"
+        app:layout_constraintTop_toBottomOf="@+id/glassesDrunkText" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="128dp"
+        android:text="@string/weather_today"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minusButton"
+        tools:text="Whats the weather today?" />
+
+    <Spinner
+        android:id="@+id/todaysWeatherSpinner"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="16dp"
+        android:background="#E3EFEF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/lastNightsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="52dp"
+        android:text="@string/last_sleep"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarMood"
+        tools:text="Last nights sleep:" />
+
+    <EditText
+        android:id="@+id/hoursSleptNumber"
+        android:layout_width="128dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:hint="@string/hours_slept"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/minutesSleptNumber"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <EditText
+        android:id="@+id/minutesSleptNumber"
+        android:layout_width="142dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:hint="@string/minutes_slept"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/todaysWeatherSpinner"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="156dp"
+        android:backgroundTint="#E3EFEF"
+        android:onClick="onSubmitClick"
+        android:text="@string/submit"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todaysWeatherSpinner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
